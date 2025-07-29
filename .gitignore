@@ -1,0 +1,9 @@
+/vendor/
+/repos/*
+.env
+/.idea/
+/node_modules/
+/public/dist/
+/public/js/
+docker-compose.yml
+Dockerfile
