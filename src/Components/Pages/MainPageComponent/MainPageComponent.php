@@ -14,6 +14,8 @@ class MainPageComponent extends PageComponent implements ISetup
 {
     protected int $yearsOld = 0;
 
+    protected string $title = "egid.io | home";
+
     public function __construct(
         protected ImageCtaComponent $imageCtaComponentGithub,
         protected ImageCtaComponent $imageCtaComponentDumpsterfire,
