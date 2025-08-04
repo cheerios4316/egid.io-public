@@ -8,7 +8,7 @@ namespace Src\Components\ImageCtaComponent;
 
 ?>
 
-<div class="image-cta-component relative w-full md:w-96 h-48 md:h-64 rounded-lg text-purple-200 text-lg md:transition-all shadow-lg border-purple-800 hover:border-2 md:hover:border-0 md:hover:scale-110">
+<div class="image-cta-component relative w-full md:w-96 h-48 md:h-56 rounded-lg text-purple-200 text-lg md:transition-all shadow-lg border-purple-800 hover:border-2 md:hover:border-0 md:hover:scale-110">
     <a class="" href="<?= $this->getHref() ?>" target="<?= $this->getTarget() ?: "" ?>">
         <img
             src="<?= $this->getImageSrc() ?>"

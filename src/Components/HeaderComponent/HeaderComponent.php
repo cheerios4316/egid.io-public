@@ -8,7 +8,7 @@ class HeaderComponent extends Component
 {
     protected string $title = "> egid.io";
 
-    protected bool $animate = false;
+    protected bool $animate = true;
 
     public function getTitle(): string
     {

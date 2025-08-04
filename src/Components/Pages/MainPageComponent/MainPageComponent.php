@@ -12,6 +12,8 @@ use Src\Components\SectionDivisionComponent\SectionDivisionComponent;
 
 class MainPageComponent extends PageComponent implements ISetup
 {
+    protected int $yearsOld = 0;
+
     public function __construct(
         protected ImageCtaComponent $imageCtaComponentGithub,
         protected ImageCtaComponent $imageCtaComponentDumpsterfire,
@@ -26,7 +28,7 @@ class MainPageComponent extends PageComponent implements ISetup
         $this->sourceCodeLinkComponent
             ->setHref("https://github.com/cheerios4316/egid.io-public")
             ->setTarget("_blank")
-            ->setText("check out the source code")
+            ->setText("Check out the source code")
         ;
 
         $this->imageCtaComponentGithub
@@ -61,7 +63,7 @@ class MainPageComponent extends PageComponent implements ISetup
         ];
     }
 
-    public function generateSectionDivisionComponent(string $text): SectionDivisionComponent
+    public function generateDivider(string $text): SectionDivisionComponent
     {
         return $this->container->create(SectionDivisionComponent::class)->setText($text);
     }
@@ -69,5 +71,16 @@ class MainPageComponent extends PageComponent implements ISetup
     public function getSourceCodeLinkComponent(): LinkComponent
     {
         return $this->sourceCodeLinkComponent;
+    }
+
+    public function getYearsOld(): int
+    {
+        return $this->yearsOld;
+    }
+
+    public function setYearsOld(int $yearsOld): self
+    {
+        $this->yearsOld = $yearsOld;
+        return $this;
     }
 }

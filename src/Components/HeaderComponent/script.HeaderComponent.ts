@@ -1,7 +1,10 @@
 import { Component } from "dumpsterfire/Component";
+import $ from "jquery";
 
 export class HeaderComponent extends Component {
   protected titleElement: any;
+  protected blinkerElement: any;
+
   protected title: string = "";
   protected animate: boolean = false;
 
@@ -16,16 +19,19 @@ export class HeaderComponent extends Component {
       "abcdefghijklmnopqrstuvwxyz.!-@#\\/^*_&%$;"
     );
     this.animate = this.$element.data("animate");
+    this.blinkerElement = this.$element.find(".blinker-element");
   }
 
   protected bindEvents(): void {
-    console.log(this.$element.data())
-    this.animate && this.animateTitle();
+    if (this.animate) {
+      $(this.blinkerElement).css("visibility", "hidden");
+      this.animateTitle();
+    }
   }
 
   protected animateTitle(): void {
     const letterTimegap = 200;
-    const randAmount = 3;
+    const randAmount = 5;
     const title = this.title;
     const charList = this.charList;
 
@@ -38,6 +44,7 @@ export class HeaderComponent extends Component {
     const interval = setInterval(() => {
       if (mainCounter >= title.length) {
         clearInterval(interval);
+        this.setBlinker();
         return;
       }
 
@@ -58,12 +65,32 @@ export class HeaderComponent extends Component {
     }, Math.floor(letterTimegap / randAmount));
   }
 
+  protected setBlinker() {
+    const timer = 2000;
+
+    setTimeout(() => {
+      this.toggleBlinker("visible");
+    }, timer / 4);
+
+    const blinker = setInterval(() => {
+      this.toggleBlinker("visible");
+      setTimeout(() => {
+        this.toggleBlinker("hidden");
+      }, Math.floor(timer / 4));
+    }, timer);
+  }
+
   protected randomChar(list: string): string {
     const randIndex = Math.floor(Math.random() * list.length);
     return list[randIndex];
   }
 
+  protected toggleBlinker(visibility: "visible" | "hidden") {
+    $(this.blinkerElement).css("visibility", visibility);
+  }
+
   protected shuffleString(elem: string): string {
+    // non linear, ugly, inefficient
     for (let i = 0; i < 3; i++) {
       elem = elem
         .split("")
