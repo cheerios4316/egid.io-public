@@ -21,6 +21,6 @@ $router->registerRoute('/', MainPageController::class);
 $app
     ->setRouter($router)
     ->setPageTemplateHeader(HeaderComponent::class)
-    ->connectDatabase($_ENV["DB_HOST"], $_ENV["DB_NAME"], $_ENV["DB_PORT"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"])
+    //->connectDatabase($_ENV["DB_HOST"], $_ENV["DB_NAME"], $_ENV["DB_PORT"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"])
     ->run()
 ;
