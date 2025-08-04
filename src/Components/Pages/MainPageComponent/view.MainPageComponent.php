@@ -22,7 +22,7 @@ namespace Src\Components\Pages\MainPageComponent;
 
 
     <div class="px-8 flex flex-col md:flex-row gap-8 justify-evenly">
-        <div class="flex flex-col gap-2 w-full md:w-1/2 pr-8 text-justify">
+        <div class="flex flex-col gap-2 w-full md:w-1/2 md:pr-8 text-justify">
             <p>
                 I am a <?= $this->getYearsOld() ?> years old web developer from Italy 🇮🇹, currently based in Pisa.
             </p>
