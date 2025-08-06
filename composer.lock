@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cheerios4316/dumpsterfire-pages.git",
-                "reference": "90ef85ac758288c5303a0f54a43615947a8c79ea"
+                "reference": "1d07946ef30280403e3cdd7bd432add59acac845"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cheerios4316/dumpsterfire-pages/zipball/90ef85ac758288c5303a0f54a43615947a8c79ea",
-                "reference": "90ef85ac758288c5303a0f54a43615947a8c79ea",
+                "url": "https://api.github.com/repos/cheerios4316/dumpsterfire-pages/zipball/1d07946ef30280403e3cdd7bd432add59acac845",
+                "reference": "1d07946ef30280403e3cdd7bd432add59acac845",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 "source": "https://github.com/cheerios4316/dumpsterfire-pages/tree/main",
                 "issues": "https://github.com/cheerios4316/dumpsterfire-pages/issues"
             },
-            "time": "2025-07-29T16:52:31+00:00"
+            "time": "2025-08-06T09:07:01+00:00"
         },
         {
             "name": "filp/whoops",
@@ -372,16 +372,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v7.3.1",
+            "version": "v7.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "23dd60256610c86a3414575b70c596e5deff6ed9"
+                "reference": "6877c122b3a6cc3695849622720054f6e6fa5fa6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/23dd60256610c86a3414575b70c596e5deff6ed9",
-                "reference": "23dd60256610c86a3414575b70c596e5deff6ed9",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/6877c122b3a6cc3695849622720054f6e6fa5fa6",
+                "reference": "6877c122b3a6cc3695849622720054f6e6fa5fa6",
                 "shasum": ""
             },
             "require": {
@@ -431,7 +431,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v7.3.1"
+                "source": "https://github.com/symfony/http-foundation/tree/v7.3.2"
             },
             "funding": [
                 {
@@ -443,11 +443,15 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-06-23T15:07:14+00:00"
+            "time": "2025-07-10T08:47:49+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

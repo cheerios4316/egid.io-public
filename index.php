@@ -13,7 +13,7 @@ $container = Container::getInstance();
 
 $app = App::new()
     ->setInitActions([DotEnvInit::class])
-    ->runInitActions()
+    ->init()
 ;
 
 $router = DumpsterfireRouter::new();
