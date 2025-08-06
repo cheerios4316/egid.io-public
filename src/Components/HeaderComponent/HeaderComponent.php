@@ -19,4 +19,10 @@ class HeaderComponent extends Component
     {
         return $this->animate;
     }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+        return $this;
+    }
 }

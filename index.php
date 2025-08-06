@@ -6,6 +6,7 @@ use DumpsterfirePages\App\App;
 use DumpsterfirePages\Container\Container;
 use DumpsterfirePages\Router\DumpsterfireRouter;
 use Src\Components\HeaderComponent\HeaderComponent;
+use Src\Controllers\DocumentationController;
 use Src\Controllers\MainPageController;
 
 $container = Container::getInstance();
@@ -16,7 +17,11 @@ $app = App::new()
 
 $router = DumpsterfireRouter::new();
 
-$router->registerRoute('/', MainPageController::class);
+$router
+    ->registerRoute('/', MainPageController::class)
+    ->registerRoute('/dumpsterfire', DocumentationController::class)
+    ->registerRoute('/dumpsterfire/{sectionSlug}', DocumentationController::class)
+;
 
 $app
     ->setRouter($router)
