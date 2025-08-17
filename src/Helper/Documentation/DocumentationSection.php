@@ -11,7 +11,7 @@ class DocumentationSection
 
     protected string $slug;
 
-    protected string $content;
+    protected string $content = '';
 
     public function addSubsections(...$subsections): self
     {

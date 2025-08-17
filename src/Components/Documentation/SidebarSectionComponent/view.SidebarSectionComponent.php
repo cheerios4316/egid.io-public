@@ -10,10 +10,12 @@ namespace Src\Components\Documentation\SidebarSectionComponent;
 
 <a href="<?= $this->getSlug() ?>" class="
     sidebar-section-component w-full
-    p-4 px-2 border-b border-purple-400
+    p-4 px-2 border-purple-400
+    bg-gradient-to-r to-transparent
     text-neutral-200 font-bold
-    hover:bg-neutral-700 cursor-pointer
+    cursor-pointer
     transition-background duration-50
-    <?= $this->isActive() ? "bg-purple-300 text-neutral-800 hover:bg-purple-300" : ""?>">
+    <?= $this->isActive() ? "from-purple-300 text-neutral-800 hover:from-purple-300" : "from-purple-950 hover:from-purple-800"?>
+    transition-all">
     <?= $this->getName() ?>
 </a>

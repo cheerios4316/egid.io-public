@@ -1,0 +1,9 @@
+.sidebar-component .section-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .sidebar-component .section-menu {
+        display: none;
+    }
+}

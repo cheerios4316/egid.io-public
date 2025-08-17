@@ -23,9 +23,11 @@ export class HeaderComponent extends Component {
   }
 
   protected bindEvents(): void {
+    $(this.blinkerElement).css("visibility", "hidden");
     if (this.animate) {
-      $(this.blinkerElement).css("visibility", "hidden");
       this.animateTitle();
+    } else {
+      this.setBlinker();
     }
   }
 

@@ -6,15 +6,16 @@ use DumpsterfirePages\Component;
 use DumpsterfirePages\Container\Container;
 use DumpsterfirePages\Interfaces\ISetup;
 use Src\Components\Documentation\SidebarSectionComponent\SidebarSectionComponent;
+use Src\Helper\Documentation\DocumentationSection;
 
 class SidebarComponent extends Component implements ISetup
 {
-    /** @var \Src\Helper\Documentation\DocumentationSection[] $sections */
+    /** @var DocumentationSection[] $sections */
     protected array $sections = [];
 
     protected array $components = [];
 
-    protected ?string $activeSlug = null;
+    protected ?DocumentationSection $activeSection = null;
 
     public function __construct(protected Container $container) {}
 
@@ -22,9 +23,9 @@ class SidebarComponent extends Component implements ISetup
     {
         foreach($this->sections as $section) {
             $component = $this->container->create(SidebarSectionComponent::class);
-            $component->setName($section->getName())->setSlug($section->getSlug());
+            $component->setName($section->getName())->setSlug('/dumpsterfire/' . $section->getSlug());
 
-            if($this->activeSlug === $section->getSlug()) {
+            if($this->activeSection->getSlug() === $section->getSlug()) {
                 $component->setActive(true);
             }
 
@@ -43,9 +44,14 @@ class SidebarComponent extends Component implements ISetup
         return $this->components;
     }
 
-    public function setActiveSlug(string $activeSlug): self
+    public function setActiveSection(?DocumentationSection $section): self
     {
-        $this->activeSlug = $activeSlug;
+        $this->activeSection = $section;
         return $this;
+    }
+
+    public function getActiveSection(): ?DocumentationSection
+    {
+        return $this->activeSection;
     }
 }

@@ -9,13 +9,16 @@ use DumpsterfirePages\PageTemplate\PageTemplate;
 use Src\Components\Documentation\SidebarComponent\SidebarComponent;
 use Src\Components\ImageCtaComponent\ImageCtaComponent;
 use Src\Components\LinkComponent\LinkComponent;
+use Src\Components\MarkDownComponent\MarkDownComponent;
 use Src\Components\SectionDivisionComponent\SectionDivisionComponent;
 
 class DocumentationPageComponent extends PageComponent implements ISetup
 {
     protected int $yearsOld = 0;
 
-    protected string $title = "egid.io | dumpsterfire";
+    protected string $title = "dumpsterfire | egid.io";
+
+    protected ?MarkDownComponent $markdownComponent = null;
 
     protected ?SidebarComponent $sidebarComponent = null;
 
@@ -40,5 +43,16 @@ class DocumentationPageComponent extends PageComponent implements ISetup
     {
         $this->sidebarComponent = $sidebarComponent;
         return $this;
+    }
+
+    public function setMarkdownComponent(MarkDownComponent $markdownComponent): self
+    {
+        $this->markdownComponent = $markdownComponent;
+        return $this;
+    }
+
+    public function getMarkdownComponent(): MarkDownComponent
+    {
+        return $this->markdownComponent;
     }
 }

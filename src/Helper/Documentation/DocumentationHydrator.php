@@ -10,7 +10,6 @@ class DocumentationHydrator
     protected array $requiredFields = [
         "name",
         "slug",
-        "content"
     ];
 
     public function __construct(protected Container $container)
@@ -25,7 +24,7 @@ class DocumentationHydrator
 
         $object
             ->setName($data['name'])
-            ->setContent($data['content'])
+            ->setContent($data['content'] ?? '')
             ->setSlug($data['slug'])
             ->addSubsections(...$this->buildSubsections($data, $layer + 1))
         ;

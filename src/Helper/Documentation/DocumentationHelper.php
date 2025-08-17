@@ -2,7 +2,9 @@
 
 namespace Src\Helper\Documentation;
 
+use RuntimeException;
 use Src\Helper\JsonReader;
+use Throwable;
 
 class DocumentationHelper
 {
@@ -40,6 +42,17 @@ class DocumentationHelper
         }
 
         return $found;
+    }
+
+    public function getSectionMarkdown(string $slug): string
+    {
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/public/data/markdown/' . $slug . '.md';
+
+        try {
+            return file_get_contents($path);
+        } catch (Throwable $e) {
+            throw new RuntimeException("Error reading content of file $path: " . $e->getMessage());
+        }
     }
 
     public function getSectionList()
