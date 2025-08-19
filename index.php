@@ -5,6 +5,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use DumpsterfirePages\App\App;
 use DumpsterfirePages\AssetsManager\AssetsManager;
 use DumpsterfirePages\Container\Container;
+use DumpsterfirePages\InitActions\DotEnvInit;
 use DumpsterfirePages\Router\DumpsterfireRouter;
 use Src\Components\HeaderComponent\HeaderComponent;
 use Src\Controllers\DocumentationController;
