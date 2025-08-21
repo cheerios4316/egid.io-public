@@ -14,9 +14,6 @@ export class SidebarComponent extends Component {
     }
 
     protected bindEvents() {
-
-        this.checkMobile();
-
         $(window).on('resize', () => {
             const prev = this.isMobile;
 
@@ -32,12 +29,15 @@ export class SidebarComponent extends Component {
         })
 
         this.menuButton.on('click', (e: any) => {
+            e.stopPropagation();
             this.sectionMenu.slideToggle(200, function () {
             });
         })
 
         $(window).on('scroll', () => {
-            if (!this.isMobile) {
+            const isMobile = this.checkMobile();
+
+            if (!isMobile) {
                 return
             }
 
@@ -45,6 +45,29 @@ export class SidebarComponent extends Component {
                 this.sectionMenu.slideUp(200);
             }
         });
+
+        $(window).on('click', (e) => {
+            if(!this.sectionMenu.is(':visible')) {
+                return;
+            }
+
+            if(
+                $(e.target).hasClass("section-menu") ||
+                $(e.target).hasClass("menu-button") ||
+                $(e.target).hasClass("sidebar-section-component")
+            ) {
+                return;
+            }
+
+            if(
+                this.checkMobile()
+            ) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                this.sectionMenu.slideUp(200);
+            }
+        })
     }
 
     protected checkMobile(): boolean {

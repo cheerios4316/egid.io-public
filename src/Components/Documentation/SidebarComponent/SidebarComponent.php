@@ -25,7 +25,7 @@ class SidebarComponent extends Component implements ISetup
             $component = $this->container->create(SidebarSectionComponent::class);
             $component->setName($section->getName())->setSlug('/dumpsterfire/' . $section->getSlug());
 
-            if($this->activeSection->getSlug() === $section->getSlug()) {
+            if($this->activeSection?->getSlug() === $section->getSlug()) {
                 $component->setActive(true);
             }
 

@@ -13,7 +13,7 @@ use Src\Components\MarkDownComponent\MarkDownComponent;
 
 <div class="documentation-page-component overflow-hidden flex flex-col md:flex-row">
     <?php $this->getSidebarComponent()->render(); ?>
-    <div class="w-full">
+    <div class="w-full p-4 pr-4 md:pr-64">
         <?php
         $this->getMarkdownComponent()?->render();
         ?>

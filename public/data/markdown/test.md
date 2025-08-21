@@ -1,5 +1,0 @@
-# stronzo
-## stronzo
-### stronzo
-
-

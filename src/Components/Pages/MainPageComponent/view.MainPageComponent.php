@@ -27,14 +27,16 @@ namespace Src\Components\Pages\MainPageComponent;
                 I am a <?= $this->getYearsOld() ?> years old web developer from Italy 🇮🇹, currently based in Pisa.
             </p>
             <p>
-                I'm strongly focused on PHP but I have experience with a wide range of languages and technologies.</p>
-            <p>
                 I have a Technical High School Diploma in Computer Science and I've worked in the field for 3 years now.
             </p>
             <p>
-                My hobbies – aside from coding – include playing music, cooking good food, and playing old PC games.</p>
+                My hobbies – aside from coding – include playing music, cooking good food, and playing old PC games.
+            </p>
             <p>
-                Here I attached a couple of pictures of two crafts I'm really proud of 🥘
+                I'm strongly focused on PHP but I have experience with a wide range of languages and technologies: I worked with PHP (vanilla and Symfony), Node (both FE and BE, using technologies such as Express, NestJS, React + Next, as well as vanilla JS), SQL and even some .NET for building Windows tools.
+            </p>
+            <p>
+                On this page you can see a bunch of stuff I'm proud of: pasta with potatoes, some bread I baked, and the Dumpsterfire framework 🔥
             </p>
         </div>
         <div class="flex gap-x-4 py-4 w-full md:w-160">

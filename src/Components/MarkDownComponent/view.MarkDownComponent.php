@@ -8,7 +8,7 @@ use Src\Components\MarkDownComponent\MarkDownComponent;
 
 ?>
 
-<div class="mark-down-component text-neutral-200 text-md p-8 gap-2">
+<div class="mark-down-component text-neutral-200 text-md p-8 gap-2 md:border border-purple-400 rounded-xl">
     <?php
     try {
         echo $this->getMarkdown();

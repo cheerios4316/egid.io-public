@@ -8,12 +8,21 @@ namespace Src\Components\Documentation\SidebarComponent;
 
 ?>
 
-<div class="sidebar-component flex flex-col md:contents relative md:static w-full md:w-96">
-    <div class="menu-button text-neutral-800 md:hidden p-4 bg-gradient-to-r w-full font-bold from-purple-400 to-transparent text-xl cursor-pointer">
-        <span>Menu</span>
+<div class="sidebar-component flex flex-col md:contents relative md:static w-fullmd:px-0">
+    <div class="px-4">
+        <div class="mt-4
+    menu-button text-purple-400
+    md:hidden p-4 py-2 md:py-4
+    bg-neutral-900 w-full
+    font-bold border rounded-xl
+    text-xl cursor-pointer
+    ">
+            <span>Menu</span>
+        </div>
     </div>
-    <div class="section-menu absolute md:static z-100 w-full md:w-96 top-full">
-        <div class="flex flex-col w-full border-purple-400 md:flex">
+
+    <div class="section-menu absolute bg-neutral-900 md:static md:self-start z-100 w-full md:min-w-48 lg:min-w-64 xl:min-w-96 md:max-w-96 p-4">
+        <div class="flex flex-col w-full rounded-xl border border-purple-400 md:flex p-2 gap-2 h-auto">
             <?php
             foreach ($this->getComponents() as $component) {
                 $component->render();

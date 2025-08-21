@@ -13,7 +13,9 @@
     "build:css": "npm run build:tailwind && node build-scripts/esbuild.css.mjs",
     "watch:css": "node build-scripts/watch.css.mjs",
     "watch:all": "concurrently \"npm:watch:css\" \"npm:watch:js\"",
-    "build:all": "npm run build:css && npm run build:js"
+    "build:all": "npm run build:css && npm run build:js",
+    "gen:component": "npx create-dumpsterfire-app --component",
+    "gen:controller": "npx create-dumpsterfire-app --controller"
   },
   "author": "<your name>",
   "license": "ISC",
