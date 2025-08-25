@@ -2,11 +2,9 @@
 
 namespace Src\Controllers;
 
-use DateTime;
 use DumpsterfirePages\Controller\BaseController;
 use DumpsterfirePages\Interfaces\IControllerParams;
 use DumpsterfirePages\PageComponent;
-use DumpsterfirePages\PageTemplate\PageTemplate;
 use Src\Components\Documentation\SidebarComponent\SidebarComponent;
 use Src\Components\HeaderComponent\HeaderComponent;
 use Src\Components\MarkDownComponent\MarkDownComponent;
@@ -22,6 +20,8 @@ class DocumentationController extends BaseController implements IControllerParam
     protected string $sectionSlug = "get-started";
 
     protected static string $title = "Dumpsterfire";
+
+    protected static string $defaultContent = '> This section is empty or does not exist.';
 
     public function __construct(
         protected DocumentationPageComponent $documentationPageComponent,
@@ -47,7 +47,7 @@ class DocumentationController extends BaseController implements IControllerParam
         try {
             $content = $this->documentationHelper->getSectionMarkdown($this->sectionSlug);
         } catch (Throwable $e) {
-            $content = '';
+            $content = self::$defaultContent;
         }
 
         $this->markdownComponent->setText($content);

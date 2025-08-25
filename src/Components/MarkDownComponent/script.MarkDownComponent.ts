@@ -63,7 +63,6 @@ export class MarkDownComponent extends Component {
 
         box && block.prepend(box);
 
-
         shouldHaveButton && button && block.prepend(button);
     }
 
@@ -104,10 +103,12 @@ export class MarkDownComponent extends Component {
             "hover:text-neutral-400",
             "toggle-button",
             "transition-all",
+            "p-2",
+            "py-1",
             "absolute",
-            "top-1",
-            "md:top-4",
+            "top-4",
             "right-4",
+            "bg-neutral-900",
             "cursor-pointer",
             "z-998"
         ]

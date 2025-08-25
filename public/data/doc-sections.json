@@ -18,5 +18,13 @@
   {
     "name": "Client-side logic",
     "slug": "client-side-logic"
+  },
+  {
+    "name": "Controllers",
+    "slug": "controllers"
+  },
+  {
+    "name": "Routing",
+    "slug": "routing"
   }
 ]

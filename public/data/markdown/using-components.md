@@ -37,8 +37,7 @@ class SomeComponent extends Component implements ISetup
 the `ISetup` interface requires the implementation of a void `setup()` method, that will be executed right before
 rendering, so if you need to perform any pre-render logic, that's where you wanna put it.
 
-Example:
-
+e.g.:
 `SomeComponent.php`
 ```php
 use ...;
