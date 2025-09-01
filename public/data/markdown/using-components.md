@@ -14,7 +14,7 @@ $component = $container->create(SomeComponent::class);
 $component->render(); 
 ```
 
-`::render()` internally calls and echoes the result of `::content()`, which returns the renderer HTML as a string.
+`::render()` internally calls and echoes the result of `::content()`, which returns the rendered HTML as a string.
 
 This means that if you only need a component's HTML (e.g. if you need to use Dumpsterfire components in other rendering systems) you can just use the `::content()` method:
 
@@ -25,16 +25,7 @@ $htmlContent = $component->content();
 
 ### Pre-render setup
 
-Components can implement the ISetup interface:
-
-```php
-use DumpsterfirePages\Component;
-use DumpsterfirePages\Interfaces\ISetup;
-
-class SomeComponent extends Component implements ISetup
-```
-
-the `ISetup` interface requires the implementation of a void `setup()` method, that will be executed right before
+Components can implement the ISetup interface, which requires the implementation of a void `setup()` method, that will be executed right before
 rendering, so if you need to perform any pre-render logic, that's where you wanna put it.
 
 e.g.:

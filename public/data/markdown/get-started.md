@@ -1,13 +1,13 @@
 ## **Welcome!**
 This is the official documentation for the Dumpsterfire framework. \
  \
-These are the projects that make Dumpsterfire work: \
+These are the projects that make Dumpsterfire work: 
 
 [dumpsterfire-pages](https://github.com/cheerios4316/dumpsterfire-pages) | base package \
 [poteriforti](https://github.com/cheerios4316/poteriforti) | data source for the project initialization script\
 [create-dumpsterfire-app](https://github.com/cheerios4316/create-dumpsterfire-app) | project initialization script
 
-This documentation is still work in progress. If any crucial piece of information is missing, feel free to tell me about it.
+This documentation is still being expanded upon. If any crucial piece of information is missing, feel free to tell me about it.
 
 Lastly, if you want to see more of my work, check out [my personal homepage](/)!
 

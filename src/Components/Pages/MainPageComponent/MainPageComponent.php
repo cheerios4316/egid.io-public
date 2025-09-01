@@ -51,7 +51,7 @@ class MainPageComponent extends PageComponent implements ISetup
         $this->imageCtaComponentDumpsterfire
             ->setHref("/dumpsterfire")
             ->setImageSrc("/public/img/dumpsterfire.png")
-            ->setText("Dumpsterfire PHP")
+            ->setText("Dumpsterfire (documentation)")
             ->setTarget(target: "_blank")
         ;
     }

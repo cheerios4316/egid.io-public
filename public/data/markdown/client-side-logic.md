@@ -24,12 +24,19 @@ export class SomeComponent extends Component {
 
     protected setData(): void {
         // this runs first and sets data for the instance.
-        // it is safer to set data here rather than in the class properties directly
+        // it is safer to set data here rather than
+        // directly in the class properties
     }
 
     protected bindEvents(): void {
-        // this runs after setData(). this is where you define binds, events, on load logic, everything
-        // necessary to make the client-side logic for the component work
+        // this runs after setData().
+        // this is where you define binds, events, on load logic,
+        // and everything necessary to make the client-side logic
+        // for the component work
+
+        const doSomething = () => console.log('hello from dumpsterfire');
+
+        this.$element.on('click', doSomething);
     }
 }
 

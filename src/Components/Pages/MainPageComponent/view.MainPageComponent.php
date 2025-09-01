@@ -21,8 +21,8 @@ namespace Src\Components\Pages\MainPageComponent;
         ?>
 
 
-    <div class="px-8 flex flex-col md:flex-row gap-8 justify-evenly">
-        <div class="flex flex-col gap-2 w-full md:w-1/2">
+    <div class="px-8 flex flex-col lg:flex-row gap-8 justify-evenly">
+        <div class="flex flex-col gap-2 w-full lg:w-1/2">
             <p>
                 I am a <?= $this->getYearsOld() ?> years old web developer from Italy 🇮🇹, currently based in Pisa.
             </p>
@@ -39,9 +39,10 @@ namespace Src\Components\Pages\MainPageComponent;
                 On this page you can see a bunch of stuff I'm proud of: pasta with potatoes, some bread I baked, and the Dumpsterfire framework 🔥
             </p>
         </div>
-        <div class="flex gap-x-4 py-4 w-full md:w-160">
-            <img class="w-full h-full rounded object-cover" src="/public/img/food/pane.png" alt="Bread">
-            <img class="w-full h-full rounded object-cover" src="/public/img/food/pasta-patane.png"
+        <div class="flex gap-x-4 py-4 w-full lg:w-180">
+            <img class="w-full min-h-full rounded object-cover" src="/public/img/myself.png" alt="Myself">
+            <img class="w-full min-h-full rounded object-cover" src="/public/img/food/pane.png" alt="Bread">
+            <img class="w-full min-h-full rounded object-cover" src="/public/img/food/pasta-patane.png"
                 alt="Pasta, potatoes and provola">
         </div>
     </div>

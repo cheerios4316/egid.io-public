@@ -71,7 +71,7 @@ export class SidebarComponent extends Component {
     }
 
     protected checkMobile(): boolean {
-        return window.innerWidth <= 768;
+        return window.innerWidth < 1280;
     }
 }
 
