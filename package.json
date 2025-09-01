@@ -13,13 +13,16 @@
     "build:css": "npm run build:tailwind && node build-scripts/esbuild.css.mjs",
     "watch:css": "node build-scripts/watch.css.mjs",
     "watch:all": "concurrently \"npm:watch:css\" \"npm:watch:js\"",
-    "build:all": "npm run build:css && npm run build:js"
+    "build:all": "npm run build:css && npm run build:js",
+    "gen:component": "npx create-dumpsterfire-app --component",
+    "gen:controller": "npx create-dumpsterfire-app --controller"
   },
   "author": "<your name>",
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.15",
     "glob": "^11.0.3",
+    "highlight.js": "^11.11.1",
     "jquery": "^3.7.1",
     "mini-css-extract-plugin": "^2.9.2"
   },

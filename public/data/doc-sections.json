@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Get started",
+    "slug": "get-started"
+  },
+  {
+    "name": "Components",
+    "slug": "components"
+  },
+  {
+    "name": "Creating components",
+    "slug": "creating-components"
+  },
+  {
+    "name": "Using components",
+    "slug": "using-components"
+  },
+  {
+    "name": "Client-side logic",
+    "slug": "client-side-logic"
+  },
+  {
+    "name": "Controllers",
+    "slug": "controllers"
+  },
+  {
+    "name": "Routing",
+    "slug": "routing"
+  }
+]
