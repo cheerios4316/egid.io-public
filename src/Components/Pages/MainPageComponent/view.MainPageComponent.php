@@ -40,9 +40,9 @@ namespace Src\Components\Pages\MainPageComponent;
             </p>
         </div>
         <div class="flex gap-x-4 py-4 w-full lg:w-180">
-            <img class="w-full min-h-full rounded object-cover" src="/public/img/myself.png" alt="Myself">
-            <img class="w-full min-h-full rounded object-cover" src="/public/img/food/pane.png" alt="Bread">
-            <img class="w-full min-h-full rounded object-cover" src="/public/img/food/pasta-patane.png"
+            <img class="rounded object-cover w-0 flex-1 h-auto" src="/public/img/myself.png" alt="Myself">
+            <img class="rounded object-cover w-0 flex-1 h-auto" src="/public/img/food/pane.png" alt="Bread">
+            <img class="rounded object-cover w-0 flex-1 h-auto" src="/public/img/food/pasta-patane.png"
                 alt="Pasta, potatoes and provola">
         </div>
     </div>
